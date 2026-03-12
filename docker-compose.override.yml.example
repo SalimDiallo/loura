@@ -1,0 +1,30 @@
+# docker-compose.override.yml.example
+#
+# Copiez ce fichier vers docker-compose.override.yml pour personnaliser
+# votre environnement de développement local sans modifier docker-compose.yml
+#
+# cp docker-compose.override.yml.example docker-compose.override.yml
+
+version: "3.9"
+
+services:
+  # Exemple: Exposer PostgreSQL sur un port différent
+  # db:
+  #   ports:
+  #     - "5433:5432"
+
+  # Exemple: Ajouter des variables d'environnement au backend
+  # backend:
+  #   environment:
+  #     - CUSTOM_VAR=value
+  #   volumes:
+  #     - ./custom-scripts:/app/scripts
+
+  # Exemple: Changer le port du frontend
+  # frontend:
+  #   ports:
+  #     - "3001:3000"
+
+  # Exemple: Activer le debug pour Celery
+  # celery_worker:
+  #   command: celery -A lourabackend worker -l debug

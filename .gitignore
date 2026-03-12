@@ -1,0 +1,41 @@
+# Environment files (IMPORTANT - Never commit secrets!)
+.env
+.env.production
+.env.local
+.env.*.local
+
+# Docker volumes and data
+postgres_data/
+redis_data/
+media_volume/
+static_volume/
+
+# SSL certificates
+certbot/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Backup files
+*.sql
+*.tar.gz
+backup_*/
