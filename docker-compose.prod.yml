@@ -43,7 +43,7 @@ services:
       dockerfile: Dockerfile
     container_name: loura_backend_prod
     ports:
-      - "80:80"
+      - "8000:8000"
     environment:
       - DEBUG=False
       - SECRET_KEY=${SECRET_KEY}
