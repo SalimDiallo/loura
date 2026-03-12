@@ -84,8 +84,6 @@ services:
       dockerfile: Dockerfile
     container_name: loura_celery_worker_prod
     command: celery -A lourabackend worker -l info --concurrency=4
-    ports:
-      - "8000:8000"
     environment:
       - DEBUG=False
       - SECRET_KEY=${SECRET_KEY}
