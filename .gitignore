@@ -1,6 +1,5 @@
 # Environment files (IMPORTANT - Never commit secrets!)
 .env
-.env.production
 .env.local
 .env.*.local
 
