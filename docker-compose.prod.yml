@@ -42,6 +42,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: loura_backend_prod
+    ports:
+      - "80:80"
     environment:
       - DEBUG=False
       - SECRET_KEY=${SECRET_KEY}
@@ -82,6 +84,8 @@ services:
       dockerfile: Dockerfile
     container_name: loura_celery_worker_prod
     command: celery -A lourabackend worker -l info --concurrency=4
+    ports:
+      - "8000:8000"
     environment:
       - DEBUG=False
       - SECRET_KEY=${SECRET_KEY}
@@ -141,6 +145,8 @@ services:
       args:
         - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
     container_name: loura_frontend_prod
+    ports:
+      - "3000:3000"
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
